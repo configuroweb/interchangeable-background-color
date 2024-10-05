@@ -1,0 +1,117 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Roboto', sans-serif;
+    background-color: #1e1e2e;
+    color: #fff;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    min-height: 100vh;
+    transition: background-color 0.5s ease;
+}
+
+.content-container {
+    text-align: center;
+    padding: 2rem 1rem;
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+h1 {
+    font-size: 2.5rem;
+    margin-bottom: 2rem;
+    letter-spacing: 2px;
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
+}
+
+.nav {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
+    gap: 1rem;
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+.btn {
+    padding: 1rem;
+    border: none;
+    color: #fff;
+    cursor: pointer;
+    font-weight: bold;
+    font-size: 1rem;
+    text-transform: uppercase;
+    border-radius: 10px;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+}
+
+.btn:hover, .btn:focus {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 12px rgba(255,255,255,0.2);
+}
+
+.purple { background-color: #9b59b6; }
+.blue { background-color: #3498db; }
+.red { background-color: #e74c3c; }
+.green { background-color: #2ecc71; }
+.yellow { background-color: #f1c40f; color: #333; }
+.teal { background-color: #1abc9c; }
+
+footer {
+    background-color: rgba(0, 0, 0, 0.5);
+    text-align: center;
+    padding: 1rem;
+    margin-top: 2rem;
+}
+
+footer a {
+    color: #3498db;
+    text-decoration: none;
+    transition: color 0.3s;
+}
+
+footer a:hover {
+    color: #2980b9;
+}
+
+@media (max-width: 600px) {
+    h1 {
+        font-size: 1.8rem;
+        margin-bottom: 1.5rem;
+    }
+
+    .nav {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .btn {
+        font-size: 0.9rem;
+        padding: 0.8rem;
+    }
+
+    .content-container {
+        padding: 1rem 0.5rem;
+    }
+}
+
+@media (max-width: 400px) {
+    h1 {
+        font-size: 1.5rem;
+    }
+
+    .nav {
+        grid-template-columns: 1fr;
+    }
+
+    .btn {
+        font-size: 1rem;
+        padding: 1rem;
+    }
+}
